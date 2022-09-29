@@ -1,12 +1,15 @@
 #!/usr/bin/env python
 # coding: utf-8
+# author: Guisen Chen
+# datetime: 2022/09/02
+# email: thecgs001@foxmail.com
 
 import re
 import os
 import sys
 import pyfastx
 
-usage = f"python {os.path.basename(sys.argv[0])} file.fq.gz [optional, defualt: 1000]"
+usage = f"python {os.path.basename(sys.argv[0])} <file.fq.gz> [optional, defualt: 1000]"
 
 if len(sys.argv) != 2 and len(sys.argv) != 3:
     print(usage)
@@ -52,4 +55,3 @@ for e in counts:
     else:
         print(f'{e}: {counts[e]} (It contains {counts["MboI/DpnII"]} result of MboI/DpnII)')
 print('-------------------------------------------------')     
-
